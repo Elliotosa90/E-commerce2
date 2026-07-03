@@ -294,9 +294,9 @@ async function saveProduct() {
         }
         resetForm();
     } catch (error) {
-        console.error('Error saving product:', error);
-        showToast('Error saving product.');
-    }
+    console.error(error);
+    alert(error.message);
+}
 }
 
 function editProduct(id) {
