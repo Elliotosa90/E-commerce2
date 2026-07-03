@@ -6,13 +6,13 @@
 // ================================================================
 
 const firebaseConfig = {
-      apiKey: "AIzaSyDVgP_Ma2TdLRw5luaDod8808L5x8We2Cg",
-    authDomain: "e-commerce-3b0d8.firebaseapp.com",
-    databaseURL: "https://e-commerce-3b0d8-default-rtdb.firebaseio.com",
-    projectId: "e-commerce-3b0d8",
-    storageBucket: "e-commerce-3b0d8.firebasestorage.app",
-    messagingSenderId: "392057419128",
-    appId: "1:392057419128:web:5fed61b34921efc25c048d"
+  apiKey: "AIzaSyChmSRWhcXqSHZiqpF5tC6_xv5H-FkFO6g",
+  authDomain: "store-47697.firebaseapp.com",
+  databaseURL: "https://store-47697-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "store-47697",
+  storageBucket: "store-47697.firebasestorage.app",
+  messagingSenderId: "1035832738234",
+  appId: "1:1035832738234:web:ea4b7cd696d80be04d9d83"
 };
 
 // Initialize Firebase
