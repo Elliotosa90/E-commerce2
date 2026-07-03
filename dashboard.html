@@ -222,17 +222,21 @@ function handleFileSelect(event) {
 }
 
 async function uploadImage(file) {
-    if (!file) return null;
-    const storageRef = storage.ref();
-    const fileRef = storageRef.child('products/' + Date.now() + '_' + file.name);
+    if (!file) return "";
+
     try {
-        const snapshot = await fileRef.put(file);
-        const url = await snapshot.ref.getDownloadURL();
-        return url;
+        const fileName = Date.now() + "_" + file.name;
+        const storageRef = firebase.storage().ref("products/" + fileName);
+
+        const snapshot = await storageRef.put(file);
+        const downloadURL = await snapshot.ref.getDownloadURL();
+
+        return downloadURL;
+
     } catch (error) {
-        console.error('Upload error:', error);
-        showToast('Image upload failed. Please check Firebase Storage setup.');
-        return null;
+        console.error("Storage Error:", error);
+        alert(error.message);
+        return "";
     }
 }
 
